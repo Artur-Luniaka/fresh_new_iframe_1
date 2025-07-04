@@ -1,0 +1,51 @@
+{
+  "contactDetails": {
+    "email": "support@rollinggoingballs.com",
+    "phone": "+1 (555) ROLL-BALL",
+    "alternativePhone": "+65 6789 4321",
+    "address": {
+      "street": "123 Velocity Drive, Suite 456",
+      "city": "Singapore",
+      "zipCode": "018956",
+      "country": "Singapore"
+    },
+    "officeHours": {
+      "weekdays": "9:00 AM - 6:00 PM SGT",
+      "weekend": "10:00 AM - 2:00 PM SGT",
+      "timezone": "Singapore Standard Time (SGT)"
+    },
+    "supportTypes": [
+      {
+        "type": "Technical Support",
+        "description": "Game performance, bugs, and technical issues",
+        "responseTime": "24 hours"
+      },
+      {
+        "type": "General Inquiries",
+        "description": "Questions about gameplay, features, and updates",
+        "responseTime": "48 hours"
+      },
+      {
+        "type": "Business Partnerships",
+        "description": "Collaboration opportunities and business inquiries",
+        "responseTime": "72 hours"
+      }
+    ]
+  },
+  "officeLocations": [
+    {
+      "name": "Singapore Headquarters",
+      "address": "Marina Bay Tech Hub, Singapore",
+      "coordinates": {
+        "lat": 1.2966426,
+        "lng": 103.8517246
+      },
+      "description": "Our main development hub in the heart of Singapore's tech district"
+    },
+    {
+      "name": "Remote Development Team",
+      "address": "Global Distributed Team",
+      "description": "Our talented developers work from around the world to bring you the best rolling experience"
+    }
+  ]
+}

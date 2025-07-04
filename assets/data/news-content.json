@@ -1,0 +1,85 @@
+{
+  "updatePipeline": [
+    {
+      "id": "velocity-update-2024-01",
+      "date": "2024-01-15",
+      "title": "Sphere Velocity Update 2.4",
+      "category": "Game Update",
+      "description": "Enhanced rolling physics with improved momentum conservation. New gravity-defying tracks and smoother sphere animations.",
+      "features": [
+        "Improved sphere collision detection",
+        "3 new anti-gravity track sections",
+        "Enhanced momentum preservation system",
+        "Optimized performance for mobile devices"
+      ]
+    },
+    {
+      "id": "track-expansion-2024-01",
+      "date": "2024-01-08",
+      "title": "Track Expansion Pack: Neon Velocity",
+      "category": "Content Update",
+      "description": "Introducing the Neon Velocity track pack with 12 new challenging courses featuring light-based mechanics and glowing platforms.",
+      "features": [
+        "12 new neon-themed tracks",
+        "Light-speed boost platforms",
+        "Glow-in-the-dark sphere customizations",
+        "New achievement system for neon tracks"
+      ]
+    },
+    {
+      "id": "balance-patch-2023-12",
+      "date": "2023-12-22",
+      "title": "Balance & Stability Patch",
+      "category": "Bug Fix",
+      "description": "Critical fixes for sphere stability issues and track alignment problems. Improved overall game balance and responsiveness.",
+      "features": [
+        "Fixed sphere jittering on curved tracks",
+        "Improved touch sensitivity calibration",
+        "Enhanced visual feedback for rolling direction",
+        "Optimized loading times for complex tracks"
+      ]
+    }
+  ],
+  "momentumNotes": [
+    {
+      "id": "speed-record-note",
+      "author": "VelocityHunter",
+      "date": "2024-01-14",
+      "title": "New Speed Record Strategy",
+      "content": "Discovered that maintaining 85% velocity on curved sections while building momentum on straights yields optimal track times. Game-changing technique!",
+      "image": "assets/images/balls-1.jpg"
+    },
+    {
+      "id": "balance-technique",
+      "author": "SphereBalancer",
+      "date": "2024-01-12",
+      "title": "Perfect Balance Technique",
+      "content": "The key to mastering narrow platforms is micro-adjustments. Small, frequent corrections work better than large steering movements.",
+      "image": "assets/images/balls-2.jpg"
+    },
+    {
+      "id": "jump-timing-tip",
+      "author": "GapJumper",
+      "date": "2024-01-10",
+      "title": "Gap Jump Timing Secret",
+      "content": "Jump right when the sphere's shadow aligns with the edge. This visual cue has improved my gap-clearing success rate by 90%!",
+      "image": "assets/images/balls-3.jpg"
+    },
+    {
+      "id": "customization-combo",
+      "author": "StyleRoller",
+      "date": "2024-01-09",
+      "title": "Best Sphere Customization Combo",
+      "content": "Chrome sphere + neon trail + velocity particles = not just style points, but actually improved visibility in dark track sections.",
+      "image": "assets/images/balls-4.jpg"
+    },
+    {
+      "id": "advanced-momentum",
+      "author": "PhysicsMaster",
+      "date": "2024-01-07",
+      "title": "Advanced Momentum Conservation",
+      "content": "Banking turns while maintaining forward momentum creates a gyroscopic effect that stabilizes the sphere. Physics in action!",
+      "image": "assets/images/balls-5.jpg"
+    }
+  ]
+}

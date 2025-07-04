@@ -1,0 +1,98 @@
+/* Policy Sphere - Styles for Policy Pages */
+
+:root {
+  --policy-bg: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+  --policy-card-bg: rgba(255, 255, 255, 0.95);
+  --policy-accent: #6366f1;
+  --policy-title: #0ea5e9;
+  --policy-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  --policy-radius: 1.2rem;
+  --policy-padding: 2.2rem;
+  --policy-font: "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.policy-velocity-canvas {
+  min-height: 100vh;
+  background: var(--policy-bg);
+  font-family: var(--policy-font);
+  color: #222b3a;
+  margin: 0;
+  padding: 0;
+}
+
+.policy-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem 1.2rem 2.5rem 1.2rem;
+}
+
+.policy-card {
+  background: var(--policy-card-bg);
+  border-radius: var(--policy-radius);
+  box-shadow: var(--policy-shadow);
+  padding: var(--policy-padding);
+  margin-bottom: 2.5rem;
+}
+
+.policy-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--policy-title);
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.policy-section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--policy-accent);
+  margin-top: 2.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.policy-card p,
+.policy-card ul,
+.policy-card ol {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-bottom: 1.1rem;
+}
+
+.policy-card ul,
+.policy-card ol {
+  padding-left: 1.5rem;
+}
+
+.policy-card li {
+  margin-bottom: 0.5rem;
+}
+
+.policy-card strong {
+  color: var(--policy-accent);
+}
+
+.policy-card a {
+  color: var(--policy-title);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.policy-card a:hover {
+  color: var(--policy-accent);
+}
+
+@media (max-width: 600px) {
+  .policy-container {
+    padding: 1.2rem 0.2rem 1.2rem 0.2rem;
+  }
+  .policy-card {
+    padding: 1.1rem 0.7rem;
+    border-radius: 0.7rem;
+  }
+  .policy-title {
+    font-size: 1.3rem;
+  }
+  .policy-section-title {
+    font-size: 1.05rem;
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "controlInstructions": [
+    {
+      "id": "tilt-dynamics",
+      "title": "Tilt Dynamics",
+      "description": "Gently tilt your device or use arrow keys to guide the sphere along the track",
+      "icon": "🎮"
+    },
+    {
+      "id": "momentum-control",
+      "title": "Momentum Control",
+      "description": "Build speed on straight sections, slow down before sharp turns",
+      "icon": "⚡"
+    },
+    {
+      "id": "balance-mastery",
+      "title": "Balance Mastery",
+      "description": "Maintain equilibrium to avoid falling into the void spaces",
+      "icon": "⚖️"
+    },
+    {
+      "id": "jump-timing",
+      "title": "Jump Timing",
+      "description": "Tap to jump over gaps and obstacles at the perfect moment",
+      "icon": "🚀"
+    }
+  ],
+  "playerTestimonials": [
+    {
+      "id": "velocity-master",
+      "playerName": "VelocityMaster92",
+      "testimonial": "The sphere physics feel incredibly realistic! Each roll has perfect momentum and the track designs are mind-blowing."
+    },
+    {
+      "id": "rolling-pro",
+      "playerName": "RollingPro",
+      "testimonial": "I've been playing for weeks and still discovering new techniques. The balance between speed and control is perfect."
+    },
+    {
+      "id": "sphere-champion",
+      "playerName": "SphereChampion",
+      "testimonial": "Amazing game! The gradient tracks and smooth animations make every session feel like a new adventure."
+    },
+    {
+      "id": "momentum-rider",
+      "playerName": "MomentumRider",
+      "testimonial": "Best rolling game I've ever played. The customization options keep me coming back for more challenges."
+    },
+    {
+      "id": "track-explorer",
+      "playerName": "TrackExplorer",
+      "testimonial": "Each level brings something new. The variety in track designs and obstacles keeps the gameplay fresh and exciting."
+    },
+    {
+      "id": "speed-demon",
+      "playerName": "SpeedDemon",
+      "testimonial": "The physics engine is incredible! Every roll feels authentic and the momentum system creates such satisfying gameplay."
+    }
+  ]
+}

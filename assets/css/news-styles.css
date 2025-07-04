@@ -1,0 +1,397 @@
+/* Rolling Going Balls - News Page Styles */
+
+/* Import base styles */
+@import url("sphere-momentum.css");
+
+/* News Page Specific Variables */
+:root {
+  --news-gradient: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 50%,
+    #667eea 100%
+  );
+  --note-card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  --note-hover-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+  --image-border-radius: 1rem;
+  --note-image-size: 120px;
+  --note-image-size-mobile: 80px;
+}
+
+/* News Page Hero Section */
+.news-hero {
+  background: var(--news-gradient);
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 30% 70%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+.news-hero .momentum-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.news-hero .sphere-title {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.news-hero .momentum-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Update Pipeline Section */
+.update-ramp {
+  padding: 4rem 0;
+  background: var(--edge-slip);
+}
+
+.update-ramp .ramp-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--ball-velocity);
+  font-size: 2.5rem;
+}
+
+/* Enhanced Update Cards */
+.news-velocity {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .news-velocity {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .news-velocity {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.update-card {
+  background: var(--platform-surface);
+  border-radius: var(--momentum-radius);
+  padding: 2rem;
+  box-shadow: var(--floating-shadow);
+  transition: all var(--roll-speed) var(--slide-ease);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.update-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--velocity-accent);
+  transform: scaleX(0);
+  transition: transform var(--roll-speed) var(--slide-ease);
+}
+
+.update-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--note-hover-shadow);
+}
+
+.update-card:hover::before {
+  transform: scaleX(1);
+}
+
+.update-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.update-date {
+  color: var(--momentum-surge);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.update-category {
+  background: var(--velocity-accent);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.update-title {
+  font-size: 1.5rem;
+  font-weight: var(--velocity-weight);
+  color: var(--sphere-shadow);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.update-description {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.update-features {
+  list-style: none;
+  padding: 0;
+}
+
+.update-features li {
+  padding: 0.5rem 0;
+  color: #64748b;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.update-features li::before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* Momentum Notes Section */
+.momentum-insights {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.momentum-insights .ramp-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--ball-velocity);
+  font-size: 2.5rem;
+}
+
+/* Enhanced Note Cards with Images */
+.note-glide {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .note-glide {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .note-glide {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.note-card {
+  background: var(--platform-surface);
+  border-radius: var(--momentum-radius);
+  padding: 2rem;
+  box-shadow: var(--note-card-shadow);
+  transition: all var(--roll-speed) var(--slide-ease);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.note-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--note-hover-shadow);
+}
+
+.note-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--momentum-surge);
+  transform: scaleX(0);
+  transition: transform var(--roll-speed) var(--slide-ease);
+}
+
+.note-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Note Image Container */
+.note-image-container {
+  width: var(--note-image-size);
+  height: var(--note-image-size);
+  border-radius: var(--image-border-radius);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  position: relative;
+  box-shadow: var(--floating-shadow);
+  transition: transform var(--roll-speed) var(--slide-ease);
+}
+
+.note-card:hover .note-image-container {
+  transform: scale(1.05);
+}
+
+.note-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--roll-speed) var(--slide-ease);
+}
+
+.note-card:hover .note-image {
+  transform: scale(1.1);
+}
+
+/* Note Content */
+.note-header {
+  margin-bottom: 1rem;
+}
+
+.note-title {
+  font-size: 1.25rem;
+  font-weight: var(--velocity-weight);
+  color: var(--sphere-shadow);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.note-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.note-author {
+  font-weight: 600;
+  color: var(--momentum-surge);
+}
+
+.note-date {
+  color: #94a3b8;
+}
+
+.note-content {
+  color: #64748b;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .note-image-container {
+    width: var(--note-image-size-mobile);
+    height: var(--note-image-size-mobile);
+  }
+
+  .news-hero .sphere-title {
+    font-size: 2.5rem;
+  }
+
+  .update-ramp .ramp-heading,
+  .momentum-insights .ramp-heading {
+    font-size: 2rem;
+  }
+
+  .update-card,
+  .note-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Animation for cards */
+@keyframes note-card-float {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.note-card {
+  animation: note-card-float 0.6s var(--slide-ease) forwards;
+}
+
+.note-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.note-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.note-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.note-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.note-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Update card animations */
+@keyframes update-card-slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.update-card {
+  animation: update-card-slide 0.6s var(--slide-ease) forwards;
+}
+
+.update-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.update-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.update-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
