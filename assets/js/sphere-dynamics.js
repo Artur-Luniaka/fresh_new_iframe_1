@@ -353,49 +353,46 @@ function processSphereMessage(formElement) {
 
   console.log("📨 Processing sphere message:", messageVelocity);
 
-  // Overlay and notification elements
+  // Overlay and airplane elements
   const overlay = document.getElementById("contact-overlay");
-  const notification = document.getElementById("contact-notification");
-  const notificationContent = document.querySelector(
-    ".contact-notification-content"
-  );
-  const notificationMsg = document.getElementById(
-    "contact-notification-message"
-  );
+  const airplane = document.getElementById("airplane");
+  const messageTrail = document.getElementById("message-trail");
 
-  // Button process
-  const submitButton = formElement.querySelector(".contact-submit-btn");
-  const originalText = submitButton.textContent;
-  submitButton.textContent = "Sending...";
-  submitButton.disabled = true;
+  // Show overlay immediately
+  if (overlay) overlay.classList.add("active");
 
-  // Simulate sending
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  // Start airplane animation
   setTimeout(() => {
-    submitButton.textContent = "Sent!";
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    // Show overlay and notification
-    if (overlay) overlay.classList.add("active");
-    if (notification && notificationContent) {
-      notification.style.display = "flex";
-      setTimeout(() => {
-        notification.classList.add("active");
-      }, 10);
+    if (airplane) {
+      airplane.classList.add("flying");
     }
-    if (notificationMsg)
-      notificationMsg.textContent = "Your message has been sent successfully!";
-    // Hide all after 2.5 sec
-    setTimeout(() => {
-      if (overlay) overlay.classList.remove("active");
-      if (notification) notification.classList.remove("active");
-      setTimeout(() => {
-        if (notification) notification.style.display = "none";
-      }, 400);
-      submitButton.textContent = originalText;
-      submitButton.disabled = false;
-      formElement.reset();
-    }, 2500);
-  }, 1200);
+  }, 100);
+
+  // Show message after airplane finishes flying
+  setTimeout(() => {
+    if (messageTrail) {
+      messageTrail.textContent = "Your message has been sent successfully!";
+      messageTrail.classList.add("showing");
+    }
+  }, 2200);
+
+  // Complete animation and reset form
+  setTimeout(() => {
+    if (overlay) overlay.classList.remove("active");
+    if (airplane) airplane.classList.remove("flying");
+    if (messageTrail) {
+      messageTrail.classList.remove("showing");
+      messageTrail.textContent = "";
+    }
+
+    // Reset form
+    formElement.reset();
+
+    console.log("✅ Message sent successfully!");
+  }, 4500);
 }
 
 // Rolling Animations - Sphere Motion
